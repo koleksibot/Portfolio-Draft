@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,500,700');
+
+
+
+body {
+  background-color: #212127;
+  
+  font-family:  'Press Start 2P', cursive;
+  /*font-family: 'Play', sans-serif; */
+  color: white;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vh;
+  min-width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+a{
+  text-decoration: none;
+  color: white !important;
+}
+
+#container{
+display: flex;
+width: 100vw;
+height: 100vh;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+
+#nav{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 60px;
+    width: 100vw;
+    text-align: right;
+ }
+ 
+
+ #logo{
+    font-family:  'Press Start 2P', cursive;
+    position: fixed;
+    left: 25px;
+    top: 18px;
+    font-size: 3.5vmin;
+    cursor: pointer;
+}
+
+ .link{
+     position: relative;
+     top: 20px;
+     margin-left: 10vmin;
+     margin-right: 10vmin;
+     font-family:  'Press Start 2P', cursive;
+     font-size: 1.7vmin;
+     text-decoration: none;
+     color: white;
+ }
+ 
+ .link:hover{
+     color: rgb(255, 241, 117);
+     
+ }
+
+#grid{
+  transform: rotate(90deg);
+  width: 85vmin;
+  height: 30vmin;
+  position: fixed;
+left: -20vmin;
+display: none;
+}
+
+
+#bounceInfinite, #runRight, #rightStand, #leftStand{
+  opacity: 1;
+  width: 27vmin;
+  height: 27vmin;
+  position: absolute;
+  top: 45vh;
+  left: 5vmin;
+  z-index: 0;
+  }
+
+
+
+  #gameArea{
+    min-height: 100vh;
+    width: 100vw;
+  
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  
+
+  #clipPerson{
+    width: 13vmin;
+    height: 13vmin;
+    background-image: url("../Images/RunLeft.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-Position: 0px 0px;
+    /* TOP RIGHT BOTTOM LEFT */
+
+    position: relative;
+    left: 10vw;
+    bottom: 16vmin;
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: center;
+z-index: 3;
+}
+
+#person{
+  display: none;
+    opacity: 1;
+width: 190vmin;
+height: 12vmin;
+z-index: 0;
+}
+
+
+
+#platform{
+  width: 100vw;
+  height: 17vh; 
+  position: absolute;
+bottom: -10;
+  background-image: url('../Images/infinitefloatplat-1.png.png');
+  background-repeat:repeat-x;
+  background-size:contain;
+}

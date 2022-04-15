@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="./projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link href="../fontawesome/css/all.min.css" rel="stylesheet">
+
+    <link href="../accessory.css" rel="stylesheet">
+
+</head>
+
+
+
+
+<body>
+
+    <div id="container">
+
+
+        <!-- ANCHOR TO GO TO TOP OF PAGE -->
+        <div id="anchor">anchor.</div>
+
+        <a href="#anchor"> <i id="up" class="fas fa fa-solid fa-chevron-circle-up"></i></a>
+
+
+        <div id="nav" class="animate__animated animate__fadeIn animate__delay-1s">
+            <div id="logo"><a href="../index.html">J.</a></div>
+
+            <a class="link" href="../index.html">home</a>
+            <a class="link" href="../About/about.html">about</a>
+            <a class="link" href="#">projects</a>
+
+        </div>
+
+
+        <!-- burger nav -->
+        <div class="burger" id="burger">
+            <i class="fa fas fa-bars"></i>
+
+            <i class="fa fas fa-times"></i>
+
+        </div>
+
+
+        <nav class="vertNavBar">
+            <ul class="nav-links">
+                <li class="nav-link"><a class="vertLink" href="../index.html">home</a></li>
+                <li class="nav-link"><a class="vertLink" href="../About/about.html">about</a></li>
+                <li class="nav-link"><a class="vertLink" href="#">projects</a></li>
+            </ul>
+        </nav>
+
+
+
+
+        <h2>Projects</h2>
+
+        <div id="row1" class="row animate__animated animate__fadeIn">
+
+            <a href="./nowtax.html">
+                <div id="box1" class="box">
+                    <video id="nowtaxVid" autoplay muted loop>
+                        <source src="../Images/nowtax.mp4" type="video/mp4">
+
+                    </video>
+
+                    <div id="nowtaxCap" class="caption animate__animated">
+
+                        <h1> Now Tax Canada</h1>
+                        Website Design and Development
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <a href="./pomodoro.html">
+                <div id="box2" class="box">
+                    <video autoplay muted loop>
+                        <source src="../Images/pomodoro.mp4" type="video/mp4">
+
+                    </video>
+
+                    <div id="pomodoroCap" class="caption animate__animated">
+
+                        <h1>Pomodoro Clock</h1>
+                        Single Page React App
+                    </div>
+
+                </div>
+            </a>
+
+
+
+            <div id="box3" class="box">
+                <video id="gameVid" autoplay muted loop>
+                    <source src="../Images/game.mp4" type="video/mp4">
+
+                </video>
+
+                <div id="gameCap" class="caption animate__animated">
+                    <h1>Hero Mini Game</h1>
+                    Flappy Bird type game (vanilla javascript)
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- GAME POPUP -->
+        <div class="popup" id="gamePopup">
+
+            <i id="close" class="fa fas fa-times close"></i>
+            <img id="hero" src="../Images/flying.gif">
+            <h1>Hero Mini Game</h1>
+
+            <div class="yellow">OVERVIEW</div>
+
+            This game is similar to the once popular game "flappy bird".
+            I wanted to try creating a 2D game using the HTML canvas element, and
+            practice animating/clipping spritesheets.
+            I created the flying hero spritesheet using piskel.
+            On desktop, the game allows the hero to move back, forward, up, and down.
+            This is different from Flappy Bird and adds a layer of complexity to the game.
+
+            <br><br>
+
+            <div id="buttonContainer">
+                <a href="../index.html" class="button popupBut">PLAY GAME</a>
+
+                <a href="https://www.github.com/jennyunh" class="button popupBut">GITHUB REPO</a>
+            </div>
+
+        </div>
+
+        <!-- MERIDIAN POPUP -->
+        <div class="popup" id="meridianPopup">
+
+            <i id="close#2" class="close fa fas fa-times"></i>
+            <h1>Meridian Rehabilitation</h1>
+
+            <div class="yellow">OVERVIEW</div>
+
+            Meridian Rehabilitation is an occupational therapy firm with several locations
+            in the Lower Mainland.
+            Meridian wanted a design upgrade to attract new staff members and
+            streamline the process of making referrals for clients.
+            I designed the logo and helped style the website using css on Wordpress.
+            The website has a simple UI, and it is much easier to navigate and
+            find information compared to the old site.
+
+            <br><br>
+
+            <div id="buttonContainer">
+                <a href="https://meridianrehabilitation.ca/" target="_blank" class="button popupBut">VIEW SITE</a>
+            </div>
+
+        </div>
+
+
+         <!-- DESIGN POPUP -->
+         <div class="popup" id="designPopup">
+
+            <i class="close fa fas fa-times"></i>
+    
+    <video id="designVid" autoplay controls muted loop>
+        <source src="../Images/designvidd.mp4" type="video/mp4">
+
+    </video>
+
+<br>
+    Note: Download the video file to view animated gifs<br>
+            <div id="buttonContainer">
+                <a href="https://drive.google.com/drive/folders/1RAS2hkWdcPXJkrmyfOrAhklWYa3lQK73?usp=sharing" 
+                target="_blank" class="button popupBut">DOWNLOAD FILE</a>
+            </div>
+
+        </div>
+
+
+<!-- MORE POPUP -->
+<div class="popup" id="morePopup">
+
+    <i class="close fa fas fa-times"></i>
+    <h1>More Tidbits</h1>
+
+    <div class="yellow">Unity</div>
+
+  
+Recently I started learning Unity because I'd like to make an Indie game.<br>
+Track my learning progress here:
+
+<div id="buttonContainer">
+    <a href="https://learn.unity.com/u/623ad84fedbc2a20fd657db2?tab=activity" target="_blank" class="button popupBut">
+        LEARNING PROFILE</a>
+    <a href="https://play.unity.com/mg/other/ball-fall-chicken" target="_blank" class="button popupBut">
+        CHICKEN BALL ANIMATION</a>
+</div>
+
+    <br><br>
+
+    <div class="yellow">Codepen</div>
+
+    I frequently use Codepen to test out animations and draft up design components. 
+    You can also see the projects I completed for FreeCodeCamp when I first started learning code.
+    Projects like making a calculator, a random quote generator, and a drumkit.
+    I store design components and animations I use frequently on my pen.
+
+    <div id="buttonContainer">
+        <a href="https://codepen.io/jennyunh" target="_blank" class="button popupBut">VIEW CODEPEN</a>
+    </div>
+<br><br>
+
+    <div class="yellow">Learning Materials</div>
+
+ I used to teach Secondary level Sciences and Math. I've designed many teaching materials and 
+ put them up as products in my TPT marketplace. <br>Check them out:
+
+
+
+    <div id="buttonContainer">
+        <a href="https://www.teacherspayteachers.com/Store/Ms-Hwangs-Resources" 
+        target="_blank" class="button popupBut">VIEW PRODUCTS</a>
+    </div>
+
+    <br><br>
+
+    <div class="yellow">Web Design: Floor Levelling Company</div>
+
+ I am currently designing a website on Wix for a startup floor levelling company in Vancouver. 
+ The challenge is to make the construction company look refined.
+ <br>This is a work in progress:
+ 
+       <div id="buttonContainer">
+           <a href="https://patrickguinane10.wixsite.com/the-best-floor-level" 
+           target="_blank" class="button popupBut">VIEW SITE</a>
+       </div>
+       <br><br>
+
+       <div id="closeContainer">
+       <i id="close2" class="fa fas fa-times"></i> 
+       CLOSE
+    </div>
+      
+   
+
+
+
+</div>
+
+
+        <!-- ROW 2 -->
+        <div id="row2" class="row animate__animated animate__fadeIn">
+
+            <div id="box4" class="box">
+                <video id="meridianVid" autoplay muted loop>
+                    <source src="../Images/meridian.mp4" type="video/mp4">
+
+                </video>
+
+                <div id="meridianCap" class="caption animate__animated">
+                    <h1>Meridian Rehabilitation</h1>
+                    Design Upgrade and Logo Design
+                </div>
+
+            </div>
+
+
+
+            <div id="box5" class="box">
+                <img src="../Images/design.png">
+
+                <div id="designCap" class="caption animate__animated">
+                    <h1>My Designs</h1>
+                    Various assets and products I designed.
+                </div>
+
+            </div>
+
+
+            <div id="box6" class="box">
+                <video id="gameVid" autoplay muted loop>
+                    <source src="../Images/more.mp4" type="video/mp4">
+
+                </video>
+
+
+                <div id="moreCap" class="caption animate__animated">
+                    <h1>View More</h1>
+                    Other small tidbits.
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+        <!-- FOOTER -->
+        <div id="footer">
+
+            <div id="col1f">
+                <div class="titleStyle">Have a Project in Mind?</div>
+                Let's Chat! <br><br>
+
+                <div id="mushbutton">
+
+                    <div id="mushrooms">
+                        <img class="mush" id="redmush" src="../Images/redmushani.gif">
+                        <img class="mush" id="greenmush" src="../Images/greenmushani.gif">
+                        <img class="mush" id="yellowmush" src="../Images/yellowmushani.gif">
+
+                    </div>
+
+
+
+                    <div class="button" id="copyEmail">
+                        Copy Email
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+            <div id="col2f">
+                <div class="titleStyle">Navigation</div><br>
+                <a href="../index.html">Home</a>
+                <a href="#">Projects</a>
+                <a href="../About/about.html">About</a>
+
+
+            </div>
+
+
+
+
+            <div id="col3f">
+                <div class="titleStyle">Other</div><br>
+                <a target="_blank" href="https://drive.google.com/drive/folders/1YCFHRy15XxIlPOWWO-SGcwimxJURfujl?usp=sharing">Resume</a>
+                <a target="_blank" href="https://www.github.com/jennyunh">Github</a>
+                <a target="_blank" href="https://codepen.io/jennyunh">Code Pen</a>
+
+
+            </div>
+
+
+
+
+
+
+        </div>
+        <!--END OF FOOTER  -->
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="./projects.js"></script>
+    <script src="../burger.js"></script>
+</body>
+
+</html>

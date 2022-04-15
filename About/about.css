@@ -1,0 +1,768 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #242424;
+    font-family: "Play", 'Segoe UI', serif;
+    /*font-family: 'Play', sans-serif; */
+    color: white;
+    min-height: 100vh;
+   min-width: 100vw;    
+}
+
+#centerTitles{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    font-size: 2vmin;
+    z-index: 5;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: rgb(255, 255, 123);
+}
+
+
+/* NAV BAR */
+#nav{
+   position: fixed;
+   left: 0;
+   top: 0;
+   height: 60px;
+   width: 100vw;
+   text-align: right;
+   z-index: 5;
+}
+
+.link{
+    position: relative;
+    top: 20px;
+    margin-left: 10vmin;
+    margin-right: 10vmin;
+    font-family:  'Press Start 2P', cursive;
+    font-size: 1.7vmin;
+}
+
+.link:hover{
+    color: rgb(255, 241, 117);
+    text-decoration: underline;
+    
+}
+
+#logo{
+    font-family:  'Press Start 2P', cursive;
+    position: absolute;
+    left: 60px;
+    top: 15px;
+    font-size: 3.5vmin;
+    cursor: pointer;
+}
+
+
+/*----------------------------*/
+/* ----VERTICAL NAV BAR------ */
+/*----------------------------*/
+
+.vertNavBar .nav-links li:nth-of-type(1),
+.vertNavBar .nav-links li:nth-of-type(2),
+.vertNavBar .nav-links li:nth-of-type(3),
+.vertNavBar .nav-links li:nth-of-type(4),
+.vertNavBar .nav-links li:nth-of-type(5) {
+	opacity: 0;
+	transition: .3s ease-in all
+}
+
+.vertNavBar .nav-links li:nth-of-type(1).nav-link-open,
+.vertNavBar .nav-links li:nth-of-type(2).nav-link-open,
+.vertNavBar .nav-links li:nth-of-type(3).nav-link-open,
+.vertNavBar .nav-links li:nth-of-type(4).nav-link-open,
+.vertNavBar .nav-links li:nth-of-type(5).nav-link-open {
+	opacity: 1;
+	transform: translateY(10px)
+}
+
+.vertNavBar .nav-links li a::after,
+.vertNavBar .nav-links li a::before {
+	position: fixed;
+	content: "";
+	height: 4px;
+	width: 0%;
+	background-color: #2a3255;
+	left: 0;
+	border-radius: 2px;
+	transition: .3s ease all;
+	z-index: 14
+}
+
+.burger {
+	display: none;
+		position: fixed;
+		font-size: 40px;
+		top: 25px;
+		right: 25px;
+		color: #fff;
+		cursor: pointer;
+		z-index: 15;
+}
+
+.burger i:nth-of-type(1) {
+	display: block
+}
+
+.burger i:nth-of-type(2) {
+	display: none
+}
+
+.burger.burger-open {
+	color: #fff;
+	z-index: 17
+}
+
+.burger.burger-open i:nth-of-type(1) {
+	display: none
+}
+
+.burger.burger-open i:nth-of-type(2) {
+	display: block
+}
+
+.vertNavBar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 50%;
+  width: 20%;
+  background-color: rgba(22, 22, 43, .5);
+  clip-path: circle(0px at 250px 0px);
+  transition: .5s ease all;
+  z-index: 16 !important
+}
+
+.vertNavBar .nav-links {
+	position: fixed;
+	top: 22%;
+	left: 87%;
+	transform: translate(-50%, -50%)
+}
+
+.vertNavBar .nav-links li {
+	list-style-type: none
+}
+
+.vertNavBar .nav-links li:nth-of-type(1).nav-link-open {
+	transition-delay: 0.25s
+}
+
+.vertNavBar .nav-links li:nth-of-type(2).nav-link-open {
+	transition-delay: 0.35s
+}
+
+.vertNavBar .nav-links li:nth-of-type(3).nav-link-open {
+	transition-delay: 0.45s
+}
+
+.vertNavBar .nav-links li:nth-of-type(4).nav-link-open {
+	transition-delay: 0.55s
+}
+
+.vertNavBar .nav-links li a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 17px;
+	position: relative;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 0
+}
+
+.vertNavBar .nav-links li a::before {
+	top: -2px
+}
+
+.vertNavBar .nav-links li a::after {
+	bottom: -5px
+}
+
+.vertNavBar .nav-links li a:hover::before {
+	width: 100%
+}
+
+.vertNavBar .nav-links li a:hover::after {
+	width: 100%
+}
+
+.vertNavBar.nav-open {
+	display: block;
+	z-index: 14;
+	clip-path: circle(100%)
+}
+
+.nav-links {
+	display: none
+}
+
+
+
+
+
+#pic{
+    width: 60vmin;
+    height: 60vmin;
+}
+
+ul{
+    position: relative;
+    left: -3vmin;
+}
+
+.show{
+    opacity: 1;
+}
+
+
+
+#twoColumns{
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 25vmin;
+    margin-bottom: 15vmin;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+    position: relative;
+    left: -3vmin;
+
+}
+
+#col1{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%; 
+    padding-right: 5vmin; 
+
+
+}
+
+#col2{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+
+}
+
+.mouse{
+    position: relative;
+    left: -5vmin;
+    top: -2vmin;
+}
+
+#mouse2{
+    display: none;
+}
+
+
+
+#aboutDescription{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    font-size: 2.5vmin;
+}
+
+#aboutTitle, #aboutDescription{
+    z-index: 3;
+}
+
+#aboutTitle{
+    font-family: "Press Start 2P", serif;
+
+}
+
+#board{
+    position: absolute;
+    z-index: 0;
+width: 70vmin;
+height: 70vmin;
+}
+
+
+#aboutSection{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: "Play", 'Segoe UI', serif;
+    font-weight: lighter;
+    line-height: 3.5vmin;
+    font-size: 2.8vmin;
+color: white;
+padding-left: 5vmin;
+ 
+
+
+}
+
+
+#close, #close2{
+    position: absolute;
+    right: 2vmin;
+    top: 2vmin;
+    cursor: pointer;
+    font-size: 5vmin;
+   
+}
+
+#buttons{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 60vmin;
+
+}
+
+#skillSection, #contactSection{
+    position: fixed;
+    left: 25vw;
+    top: 25vh;
+    padding-top: 10vmin;
+    padding-bottom: 10vmin;
+    width: 50%;
+    height: 50%;
+    background:rgb(30, 29, 32);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    display: none;
+   z-index: 3;
+
+
+}
+
+#skillsTitle, #contactTitle{
+    font-family:  'Press Start 2P', cursive;
+    font-size: 3vmin;
+}
+
+#skillsText, #contactText{
+    width: 100%;
+height: 100%;
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: center;
+font-size: 2vmin;
+}
+
+
+#skillsList{
+    columns: 20vmin 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+
+ 
+}
+
+/*Floating Icons*/
+.skillIcon{
+    height: 5vmin;
+    width: 5vmin;
+    margin-right: 3vmin;
+    margin-left: 3vmin;
+}
+
+
+
+  
+  .skills-diagram {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      font-size: 16px;
+      position: relative;
+      max-width: 480px;
+width: 100%;
+height: 100%;
+  }
+  
+
+  
+    .skills-diagram .item {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+  
+  
+      -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+
+      opacity: .7; 
+    }
+    
+    .skills-diagram .item:hover {
+      opacity: 1;    
+    }
+    
+    /* Support vertical mode */
+    .skills-diagram-vertical .item {
+      display: block;
+    }
+    
+    /* Provide different sizes */
+    .skills-diagram .skill-1 {
+      /* background-color: rgba(201, 155, 129); */
+      border-color: #85e89d;    
+    }
+    
+
+
+
+     /* FLOATING */
+  
+ .item {  
+    animation-name: floating;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+.skills-diagram .item:nth-child(even) {
+    animation-duration: 4s;
+}
+
+
+/* used in skills section */
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+
+#journey{
+    display: flex;
+    width: 100%;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#journeyTitle{
+    font-family: "Press Start 2P", serif;
+    font-size: 3.5vmin;
+
+}
+
+/*container for journey content*/
+#journeyText{
+    height: 100%;
+    width: 100%;
+    padding-top: 10vmin;
+    background: rgb(26, 25, 25);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#journeyStuff{
+width: 80%;
+font-size: 2vmin;
+}
+
+.colj{
+    display: flex;
+flex-flow: row nowrap;
+justify-content: center;
+align-items: center;
+padding-top: 25vmin;
+}
+
+.colj1, .colj2{
+    width: 100%;
+    height: 100%;
+}
+
+.colj2{
+    color: rgb(221, 221, 221);
+    padding-left: 15vmin;
+    font-size: 2.2vmin;
+}
+
+.colj1{
+    align-self: flex-start;
+    font-family: "Press Start 2P", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5vmin;
+    color: rgb(255, 255, 179);
+    width: 60%;
+}
+
+#lastcolj{
+    padding-bottom: 25vmin;
+}
+
+.button {
+    background-color: #222222;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5vmin;
+    cursor: pointer;
+    font-family: "Press Start 2P", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    z-index: 2;
+    -webkit-transition: all .1s ease-in-out;
+   -moz-transition: all .1s ease-in-out;
+   transition: all .1s ease-in-out;
+box-shadow: 1px 1px rgb(146, 146, 146);
+margin: 2vmin;
+padding: 1vmin;
+}
+
+.button:hover {
+    opacity: 0.8;
+    background-color: #f56850;
+    box-shadow: 1px 1px 20px rgb(46, 46, 46);
+}
+
+.opacityOne{
+opacity: 1;
+}
+
+.blur{
+    opacity: 0.5;
+    filter: blur(3px);
+    }
+
+
+
+
+    /* FOOTER */
+
+    #footer{
+
+        width: 100%;
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: flex-start;
+   align-items: center;
+    }
+
+    #col1f, #col2f, #col3f{
+width: 100%;
+display: flex;
+flex-flow: column nowrap;
+justify-content: flex-start;
+align-items: flex-start;
+
+    }
+
+    #col1f{
+        padding: 10vmin;
+        
+    }
+
+
+    #col2f, #col3f{
+        line-height: 4vmin;
+      }
+
+
+    .titleStyle{
+        font-family: "Press Start 2P", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 2.5vmin;
+    }
+
+    #copyEmail{
+        width: 25vmin;
+        padding: 2.5vmin;
+        position: relative;
+       left:  -2vmin;
+       z-index: 3;
+    }
+
+
+
+    #mushrooms{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+   
+    }
+    .mush{
+        width: 8vmin;;
+        height: 8vmin;
+        position: relative;
+        top: 2vmin;
+    }
+
+    #redmush{
+        position: inherit;
+        top: 3vmin;
+    }
+
+    #yellowmush{
+        position: inherit;
+        top: 3.7vmin;
+        left: -2vmin;
+    }
+
+ #mushbutton{
+display: flex;
+width: 100%;
+height: 100%;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: flex-start;
+ }
+
+
+ /* END OF FOOTER */
+
+
+
+
+
+ /* BACK TO TOP */
+ #anchor {
+	position: absolute;
+	display: block;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	opacity: 0
+}
+
+#up{
+    color: white !important;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 5vmin;
+}
+
+
+/* white line */
+.whiteLine{
+    width: 30vmin;
+    height: 1vmin;
+    border-top: 1px solid white;
+    margin: auto;
+    position: relative;
+    top: 13vmin;
+    display: none;
+}
+
+ /* IPAD and MOBILE */
+@media only screen and (min-width: 180px) and (max-width: 945px) {
+    .burger {
+          display: flex
+      }
+  
+      .vertNavBar {
+          display: block;
+      }
+
+
+      .nav-links {
+		display: block
+	}
+
+  #nav {
+		display: none
+	}
+
+    #twoColumns{
+
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;    
+        margin-top: 15vmin;
+    }
+
+
+    #col1{
+
+        align-items: center;
+        padding: 0;
+
+    }
+    
+    #col2{
+
+        align-items: center;
+    }
+
+    #aboutSection{
+        padding-top: 10vmin;
+        align-items: center; 
+    }
+
+    #mouse2{
+        display: block;
+        margin-top: 5vmin;
+    }
+
+
+    #mouse{
+        display: none;
+    }
+
+
+    }  
+
+
+
+     /* MOBILE */
+@media only screen and (max-width: 480px) {
+
+    .colj{
+    flex-flow: column nowrap;
+    text-align: center;
+    }
+
+    li{
+        text-align: left;
+    }
+
+    .colj1{
+        align-self: center;
+        padding-bottom: 5vmin;
+    }
+   
+    .colj2{
+        padding: 0;
+    }
+
+    }  

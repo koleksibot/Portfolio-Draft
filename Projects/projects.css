@@ -1,0 +1,521 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  color: white;
+    background: rgb(34, 34, 34);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    font-size: 2.5vmin;
+  }
+  
+  #container{
+  display: flex;
+  width: 100vw;
+  height: 100%;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25vmin;
+  }
+  
+  #nav{
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 60px;
+      width: 100vw;
+      text-align: right;
+      z-index: 5;
+   }
+   
+  
+   #logo{
+      font-family:  'Press Start 2P', cursive;
+      position: absolute;
+      left: 25px;
+      top: 18px;
+      font-size: 3.5vmin;
+      cursor: pointer;
+  }
+  
+   .link{
+       position: relative;
+       top: 20px;
+       margin-left: 10vmin;
+       margin-right: 10vmin;
+       font-family:  'Press Start 2P', cursive;
+       font-size: 1.7vmin;
+   }
+   
+   .link:hover{
+       color: rgb(255, 241, 117);
+       text-decoration: underline;
+       
+   }
+  
+   a{
+     color: white;
+     text-decoration: none;
+   }
+
+   a:hover{
+    color: rgb(255, 255, 123);
+}
+  
+   .row{
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     height: 100%;
+   }
+  
+  #row1{
+    padding-top: 5vmin;
+  }
+  
+  .box{
+    display: flex;
+
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 40vmin;
+    height: 40vmin;
+    margin: 2vmin;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  
+  .box:hover{
+    transform: scale(1.03);
+    border: white 2px solid;
+    filter: brightness(1.4);
+  
+  }
+  
+  
+  video, img{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  
+  
+  h1{
+    font-size: 4vmin;
+  }
+
+  h2{
+    font-family: "Press Start 2P", serif;
+    font-size: 4vmin;
+
+    
+  }
+  
+  .caption{
+    position: absolute;
+    color: black;
+    background: white;
+    opacity: 0.9;
+    height: 25vmin;
+    width: 30vmin;
+    font-size: 3vmin;
+    text-align: center;
+  }
+  
+  
+  
+/*----------------------------*/
+/* ----VERTICAL NAV BAR------ */
+/*----------------------------*/
+
+.vertNavBar .nav-links li:nth-of-type(1),
+.vertNavBar .nav-links li:nth-of-type(2),
+.vertNavBar .nav-links li:nth-of-type(3),
+.vertNavBar .nav-links li:nth-of-type(4),
+.vertNavBar .nav-links li:nth-of-type(5) {
+	opacity: 0;
+	transition: .3s ease-in all
+}
+
+.vertNavBar .nav-links li:nth-of-type(1).nav-link-open,
+.vertNavBar .nav-links li:nth-of-type(2).nav-link-open,
+.vertNavBar .nav-links li:nth-of-type(3).nav-link-open,
+.vertNavBar .nav-links li:nth-of-type(4).nav-link-open,
+.vertNavBar .nav-links li:nth-of-type(5).nav-link-open {
+	opacity: 1;
+	transform: translateY(10px)
+}
+
+.vertNavBar .nav-links li a::after,
+.vertNavBar .nav-links li a::before {
+	position: fixed;
+	content: "";
+	height: 4px;
+	width: 0%;
+	background-color: #2a3255;
+	left: 0;
+	border-radius: 2px;
+	transition: .3s ease all;
+	z-index: 14
+}
+
+.burger {
+	display: none;
+		position: fixed;
+		font-size: 40px;
+		top: 25px;
+		right: 25px;
+		color: #fff;
+		cursor: pointer;
+		z-index: 15;
+}
+
+.burger i:nth-of-type(1) {
+	display: block
+}
+
+.burger i:nth-of-type(2) {
+	display: none
+}
+
+.burger.burger-open {
+	color: #fff;
+	z-index: 17
+}
+
+.burger.burger-open i:nth-of-type(1) {
+	display: none
+}
+
+.burger.burger-open i:nth-of-type(2) {
+	display: block
+}
+
+.vertNavBar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 50%;
+  width: 20%;
+  background-color: rgba(22, 22, 43, .5);
+  clip-path: circle(0px at 250px 0px);
+  transition: .5s ease all;
+  z-index: 16 !important
+}
+
+.vertNavBar .nav-links {
+	position: fixed;
+	top: 22%;
+	left: 87%;
+	transform: translate(-50%, -50%)
+}
+
+.vertNavBar .nav-links li {
+	list-style-type: none
+}
+
+.vertNavBar .nav-links li:nth-of-type(1).nav-link-open {
+	transition-delay: 0.25s
+}
+
+.vertNavBar .nav-links li:nth-of-type(2).nav-link-open {
+	transition-delay: 0.35s
+}
+
+.vertNavBar .nav-links li:nth-of-type(3).nav-link-open {
+	transition-delay: 0.45s
+}
+
+.vertNavBar .nav-links li:nth-of-type(4).nav-link-open {
+	transition-delay: 0.55s
+}
+
+.vertNavBar .nav-links li a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 17px;
+	position: relative;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 0
+}
+
+.vertNavBar .nav-links li a::before {
+	top: -2px
+}
+
+.vertNavBar .nav-links li a::after {
+	bottom: -5px
+}
+
+.vertNavBar .nav-links li a:hover::before {
+	width: 100%
+}
+
+.vertNavBar .nav-links li a:hover::after {
+	width: 100%
+}
+
+.vertNavBar.nav-open {
+	display: block;
+	z-index: 14;
+	clip-path: circle(100%)
+}
+
+.nav-links {
+	display: none
+}
+
+
+
+
+
+    /* FOOTER */
+
+    #footer{
+
+      width: 100%;
+ display: flex;
+ flex-flow: row nowrap;
+ justify-content: flex-start;
+ align-items: center;
+background: rgb(41, 41, 41);
+margin-top: 20vmin;
+  }
+
+  
+  #col1f, #col2f, #col3f{
+width: 100%;
+display: flex;
+flex-flow: column nowrap;
+justify-content: flex-start;
+align-items: flex-start;
+
+  }
+
+  #col1f{
+      padding: 10vmin;
+      
+  }
+
+
+#col2f, #col3f{
+  line-height: 4vmin;
+}
+
+  .titleStyle{
+      font-family: "Press Start 2P", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 2.5vmin;
+  }
+
+  #copyEmail{
+      width: 25vmin;
+      padding: 2.5vmin;
+      position: relative;
+     left:  -2vmin;
+     z-index: 3;
+  }
+
+
+
+  #mushrooms{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+ 
+  }
+  .mush{
+      width: 8vmin;;
+      height: 8vmin;
+      position: relative;
+      top: 2vmin;
+  }
+
+  #redmush{
+      position: inherit;
+      top: 3vmin;
+  }
+
+  #yellowmush{
+      position: inherit;
+      top: 3.7vmin;
+      left: -2vmin;
+  }
+
+#mushbutton{
+display: flex;
+width: 100%;
+height: 100%;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: flex-start;
+}
+
+
+/* END OF FOOTER */
+
+
+
+
+ /* BACK TO TOP */
+ #anchor {
+	position: absolute;
+	display: block;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	opacity: 0
+}
+
+#up{
+    color: white !important;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 5vmin;
+}
+
+
+
+
+
+
+
+.button {
+  background-color: #222222;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5vmin;
+  cursor: pointer;
+  font-family: "Press Start 2P", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  z-index: 2;
+  -webkit-transition: all .1s ease-in-out;
+ -moz-transition: all .1s ease-in-out;
+ transition: all .1s ease-in-out;
+box-shadow: 1px 1px rgb(146, 146, 146);
+margin: 2vmin;
+padding: 1vmin;
+}
+
+.popupBut{
+  padding: 3vmin;
+  font-size: 1.8vmin;
+}
+
+#hero{
+  position: absolute;
+  left: 15vmin;
+  top: 2vmin;
+  width: 15vmin;
+  height: 15vmin
+}
+
+.blur{
+  filter: blur(4px);
+}
+
+.close {
+  position: absolute;
+  right: 2vmin;
+  top: 2vmin;
+  cursor: pointer;
+  font-size: 5vmin;
+ 
+}
+
+#closeContainer{
+  width: 100%;
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: center;
+}
+
+#close2{
+  position: relative;
+  cursor: pointer;
+  font-size: 10vmin;
+
+
+}
+
+
+
+.button:hover {
+  opacity: 0.8;
+  background-color: #f56850;
+  box-shadow: 1px 1px 20px rgb(46, 46, 46);
+}
+
+#buttonContainer{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup{
+  background: black;
+  padding: 10vmin;
+color: white;
+z-index:3;
+width: 55vmin;
+height: 40vmin;
+display: none;
+position: fixed;
+top: 50%;
+left: 50%;
+margin-top: -20vmin; /* Negative half of height. */
+margin-left: -37.5vmin; /* Negative half of width. */
+padding-bottom: 17vmin;
+
+}
+
+#morePopup{
+  overflow: scroll;
+}
+
+.yellow{
+  color: rgb(255, 253, 155);
+  font-weight: bold;
+}
+
+
+
+/* IPAD */
+@media only screen and (min-width: 480px) and (max-width: 945px) {
+  .burger {
+        display: flex
+    }
+
+    .vertNavBar {
+        display: block;
+    }
+
+
+    .nav-links {
+  display: block
+}
+
+#nav {
+  display: none
+}
+
+
+
+
+  }  

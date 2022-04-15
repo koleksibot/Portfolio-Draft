@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="./pomodoro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link href="../fontawesome/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../accessory.css">
+
+</head>
+
+
+
+
+<body>
+
+    <div id="container">
+
+        <div id="nav" class="animate__animated animate__fadeIn animate__delay-1s">
+            <div id="logo"><a href="../index.html">J.</a></div>
+
+            <a class="link" href="../index.html">home</a>
+            <a class="link" href="../About/about.html">about</a>
+            <a class="link" href="./projects.html">projects</a>
+            <a class="link" href="">contact</a>
+        </div>
+
+
+
+        <!-- burger nav -->
+    <div class="burger" id="burger">
+        <i class="fa fas fa-bars"></i>
+  
+        <i class="fa fas fa-times"></i>
+  
+      </div>
+  
+  
+      <nav class="vertNavBar">
+        <ul class="nav-links">
+          <li class="nav-link"><a class="vertLink" href="../index.html">home</a></li>
+          <li class="nav-link"><a class="vertLink" href="#">about</a></li>
+          <li class="nav-link"><a class="vertLink" href="../Projects/projects.html">projects</a></li>
+        </ul>
+      </nav>
+  
+
+
+
+        <!-- CONTENT -->
+        <div id="content">
+
+            <div id="vidContainer">
+                <video width="100%" height="100%" autoplay muted loop>
+                    <source src="../Images/pomodoroo.mp4" type="video/mp4">
+
+                </video>
+            </div>
+
+
+            <div id="contentText">
+
+
+                <div id="contentStuff">
+
+                    <div class="colj animate__animated animate__fadeInUp" id="colj11">
+
+                        <div class="colj1">
+                            <div id="contentTitle">Pomodoro Clock</div><br>
+                            OVERVIEW
+                            <br>
+                            <div id="overviewText" class="text">
+                                This single page app started as an assignment for a module on FreeCodeCamp.
+                                I decided to take it further and spend time designing the app,
+                                and adding in setting features for usability.
+                                This was the first project I coded using a new framework I had learned -- React.
+                                I had just learned about class components,
+                                and wanted to see how much I can do with this new knowledge.
+
+                            </div>
+
+                            <br>
+
+                            <div class="tools">
+
+
+                                <div class="tool">
+                                    React
+                                </div>
+
+                                <div class="tool">
+                                    CSS
+                                </div>
+
+                                <div class="tool">
+                                    Figma
+                                </div>
+
+
+
+                            </div>
+                            <!-- end of tools -->
+
+
+
+                            <div id="buttons">
+                                <a href="https://pomodoro--jennyhwang.repl.co/" target="_blank" class="button"
+                                    id="view">VIEW THE
+                                    APP</a>
+                                <a href="https://github.com/jennyunh" target="_blank" class="button" id="git">GITHUB
+                                    REPO</a>
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <div class="colj2 intro">
+                            DESIGN POINTS <br>
+                            <div class="text">
+                                This clock is often used by people who want to ensure they get small breaks in-between
+                                work
+                                sessions.
+                                The look of the app should not contribute to the stress of work.
+                                The design must be calming, visually appealing,
+                                and simple to
+                                use.
+                                I put a lot of thought into the colour palette I used and spent time learning
+                                about
+                                colour theory and the various moods colours create.
+                                I chose the calming but happy colours. I also selected audio files that were calming.
+<br><br>
+
+                                I thought it'd be nice to have a visual element on the page that would indicate the
+                                progress of time
+                                other than the numeric countdown timer. This is why I animated an SVG clock so that the
+                                hand goes around in
+                                proportion to the countdown clock.
+                                I coded a function that calculates the ratio of the work time to break time
+                                and displays the ratio on the back of the clock.
+                                The background of the clock is separated into two colours (green and yellow) based on
+                                the set
+                                break time, and the work time. One cycle around the clock is one complete "pomodoro
+                                session" (one work and one
+                                break session).
+                            </div>
+                            <br>
+
+                            IMPROVEMENTS <br>
+
+                            <div class="text">
+
+                                There are several ways this app can be improved. Currently, the SVG animation pauses
+                                when the tab is not in focus. In order for the clock animation to be in proportion to the countdown timer,
+                                the animation must continue even when the tab is out of focus.
+                                All of the settings buttons should be disabled when the clock is running.
+                                Currently only the apply and default setting buttons are disabled.
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+      
+
+
+
+
+       
+
+
+                </div>
+
+
+            </div>
+
+            <!-- end of content -->
+
+
+
+
+
+
+
+
+
+            <!-- FOOTER -->
+            <div id="footer">
+
+                <div id="col1f">
+                    <div class="titleStyle">Have a Project in Mind?</div>
+                    Let's Chat! <br><br>
+
+                    <div id="mushbutton">
+
+                        <div id="mushrooms">
+                            <img class="mush" id="redmush" src="../Images/redmushani.gif">
+                            <img class="mush" id="greenmush" src="../Images/greenmushani.gif">
+                            <img class="mush" id="yellowmush" src="../Images/yellowmushani.gif">
+
+                        </div>
+
+
+
+                        <div class="button" id="copyEmail2">
+                            Copy Email
+                        </div>
+
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div id="col2f">
+                    <div class="titleStyle">Navigation</div><br>
+                    <a href="../index.html">Home</a>
+                    <a href="../Projects/projects.html">Projects</a>
+                    <a href="../Contact/contact.html">Contact</a>
+
+                </div>
+
+
+
+                <div id="col3f">
+                    <div class="titleStyle">Other</div><br>
+                    <a target="_blank" href="https://drive.google.com/drive/folders/1YCFHRy15XxIlPOWWO-SGcwimxJURfujl?usp=sharing">Resume</a>
+                    <a target="_blank" href="https://www.github.com/jennyunh">Github</a>
+                    <a target="_blank" href="https://codepen.io/jennyunh">Code Pen</a>
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+            <!-- END OF FOOTER -->
+
+
+        </div>
+        <!-- end of container -->
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <script src="./pomodoro.js"></script>
+        <script src="../burger.js"></script>
+</body>
+
+</html>

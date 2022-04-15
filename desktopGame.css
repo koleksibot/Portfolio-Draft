@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+}
+
+canvas {
+    z-index: 1;
+    border: 1px solid white;
+}
+
+
+.playButton {
+    background-color: #222222;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2vmin;
+    cursor: pointer;
+    font-family: "Press Start 2P", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    z-index: 2;
+    -webkit-transition: all .1s ease-in-out;
+   -moz-transition: all .1s ease-in-out;
+   transition: all .1s ease-in-out;
+border: black 3px;
+box-shadow: 1px 1px rgb(146, 146, 146);
+}
+
+.playButton:hover {
+    opacity: 0.8;
+    background-color: #f56850;
+    box-shadow: 1px 1px 20px rgb(46, 46, 46);
+}
+
+#playButton {
+    position: absolute;
+    top: 70vh;
+    width: 20vmin;
+    height: 6vmin;
+    opacity: 0;
+}
+
+
+#projectsButton {
+    position: absolute;
+    top: 80vh;
+    width: 30vmin;
+    height: 6vmin;
+    padding-top: 1.5vmin;
+    opacity: 0;
+
+}
+
+#playAgain, #back{
+    display: none;
+    margin: 20px;
+    z-index: 3;
+    padding: 10px;
+}
+
+
+#game {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 40vh;
+    position: absolute;
+    top: 40vh;
+}
+
+#controlContainer {
+    margin: 0;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0vh;
+    z-index: 4;
+
+}
+
+#controls {
+    width: 15vmin;
+    height: 15vmin;
+    display: none;
+
+}
+
+#controlTitle {
+    width: 30vmin;
+    height: 6vmin;
+    display: none;
+}
+
+#tap{
+    width: 45vmin;
+    height: 45vmin;
+    display: none;
+}
+
+#gameOver{
+    color: white;
+    font-size: 7vmin;
+}
+
+#tapToPlay{
+    text-align: center;
+}
+
+#pressUp, #gameOver, #tapToPlay{
+    display: none;
+}
+
+
+/* IPAD */
+@media only screen and (min-width: 480px) and (max-width: 945px) {
+
+
+}
+
+
+
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+
+}

@@ -1,0 +1,560 @@
+body {
+    background-color: #303030;
+    font-family: "Play", 'Segoe UI', serif;
+    /*font-family: 'Play', sans-serif; */
+    color: white;
+    height: 100vh;
+    width: 100vh;
+}
+
+#centerTitles{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#nav{
+   position: fixed;
+   right: 0;
+   top: 0;
+   height: 60px;
+   width: 100vw;
+   text-align: right;
+}
+
+.link{
+    position: relative;
+    top: 20px;
+    margin-left: 10vmin;
+    margin-right: 10vmin;
+    font-family:  'Press Start 2P', cursive;
+    font-size: 1.7vmin;
+}
+
+.link:hover{
+    color: rgb(255, 241, 117);
+    text-decoration: underline;
+    
+}
+
+#logo{
+    font-family:  'Press Start 2P', cursive;
+    position: fixed;
+    left: 25px;
+    top: 18px;
+    font-size: 3.5vmin;
+    cursor: pointer;
+}
+
+
+#skills{
+    font-family: "Play", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.3vmin;
+    margin-top: 6vmin;
+}
+
+
+#skillsList{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.show{
+    opacity: 1;
+}
+
+ul{
+    color:#c9c9c9;
+}
+
+
+#title{
+    transition: all 1s ease-in-out;
+    width: 60vmin;
+    height: 9vmin;
+ 
+}
+
+
+#mySkills{
+    transition: all 1s ease-in-out;
+    width: 40vmin;
+    height: 5vmin;
+ 
+}
+
+#curlyArrow{
+    position: relative;
+    left: -10px;
+    transform: rotate(-85deg);
+    width: 10vmin;
+    height: 10vmin;
+}
+
+#skillsTitle{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 65%;
+    top: -18vmin;
+}
+
+#skillsText{
+    font-size: 2.4vmin;
+}
+
+#twoColumns{
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 25vmin;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+
+#col1{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;  
+}
+
+#col2{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+#gameArea{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 60vmin;
+    width: 90vmin;
+    background: black;
+    border-radius: 5px;
+    color: white;
+}
+
+#bounceInfinite, #runRight, #rightStand, #leftStand{
+opacity: 1;
+width: 27vmin;
+height: 27vmin;
+position: absolute;
+top: 45vh;
+left: 5vmin;
+z-index: 0;
+}
+
+#clipPerson{
+    width: 100%;
+    height: 100%;
+    clip-path: inset(44% 80% 45% 10%);
+    /* TOP RIGHT BOTTOM LEFT */
+    position: absolute;
+top: 45vh;
+left: 5vmin;
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: center;
+}
+
+#person{
+    opacity: 1;
+width: 200vmin;
+height: 27vmin;
+z-index: 0;
+}
+
+
+#chest{
+    width: 70vmin;
+    height: 70vmin;
+}
+
+
+#aboutTitle{
+font-family: 'Press Start 2P', cursive;
+}
+
+#aboutDescription{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 60vmin;
+    font-size: 2.5vmin;
+}
+
+#aboutTitle, #aboutDescription{
+    z-index: 3;
+}
+
+#board{
+    position: absolute;
+    z-index: 0;
+width: 70vmin;
+height: 70vmin;
+}
+
+
+#aboutSection{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: "Play", 'Segoe UI', serif;
+    font-weight: lighter;
+    line-height: 3.5vmin;
+    font-size: 2.8vmin;
+color: black;
+ 
+
+
+}
+
+.marginRight{
+margin-right: 4vmin;
+}
+
+.marginLeft{
+    margin-left: 5vmin;
+}
+
+.bold{
+    font-family: "Play", 'Segoe UI', serif;
+    font-weight: bold;
+    font-size: 3vmin;
+    text-align: center;
+}
+
+#button{
+    background: rgb(30, 29, 32);
+    box-shadow: inset 2px 2px;
+    text-align: center;
+    padding-top: 13px;
+    width: 24vmin;
+    height: 6vmin;
+    font-size: 1.7vmin;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+
+#button:hover{
+    background-color: rgb(48, 47, 47);
+    transform: scale(0.97);
+    }
+
+
+    #workWithMe{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10vmin;
+        width: 100vw;
+    }
+
+
+
+
+
+/*Floating Icons*/
+.skillIcon{
+    height: 12vmin;
+    width: 12vmin;
+    margin-right: 3vmin;
+    margin-left: 3vmin;
+}
+
+
+
+  
+  .skills-diagram {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      font-size: 16px;
+      position: relative;
+      min-width: 400px;
+width: 90%;
+  }
+  
+
+  
+    .skills-diagram .item {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+  
+  
+      -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+
+      opacity: .7; 
+    }
+    
+    .skills-diagram .item:hover {
+      opacity: 1;    
+    }
+    
+    /* Support vertical mode */
+    .skills-diagram-vertical .item {
+      display: block;
+    }
+    
+    /* Provide different sizes */
+    .skills-diagram .skill-1 {
+      /* background-color: rgba(201, 155, 129); */
+      border-color: #85e89d;    
+    }
+    
+  
+  
+  /* FLOATING */
+  
+ .item {  
+      animation-name: floating;
+      animation-duration: 3.5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+  
+  }
+  
+  .skills-diagram .item:nth-child(even) {
+      animation-duration: 4s;
+  }
+  
+  
+  /* used in skills section */
+  @keyframes floating {
+      from { transform: translate(0,  0px); }
+      65%  { transform: translate(0, 15px); }
+      to   { transform: translate(0, -0px); }    
+  }
+  
+
+
+
+
+
+.arrow,
+.arrow:before
+{
+  position: fixed;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  margin: -20px 0 0 -20px;
+  border-left: none;
+  border-top: none;
+  border-right: 3px #fff solid;
+  border-bottom: 3px #fff solid;
+  transform: rotate(45deg);
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+}
+
+.arrow:hover{
+border-right: 3px rgb(255, 233, 108) solid;
+border-bottom: 3px rgb(255, 233, 108) solid;
+transform: rotate(45deg) scale(0.9);
+}
+  
+.arrow:before{
+  content: '';
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border-left: none;
+  border-top: none;
+  border-right: 1px #fff solid;
+  border-bottom: 1px rgb(255, 246, 121) solid;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+}
+  
+@keyframes arrow {
+  0%
+     {opacity: 1}
+  100%
+    {opacity: 0;
+    transform: translate(-10px, -10px)}
+}
+
+  
+
+#journeyText{
+position: fixed;
+top: 50%;
+left: 30px;
+opacity: 0;
+font-size: 1.7vmin;
+}
+
+
+.w3-right{
+cursor: pointer;
+z-index: 3;
+font-size: 60px;
+position: fixed;
+top: 45%;
+right: 5px;
+transform: rotate(180deg);
+}
+
+
+
+.w3-right:hover{
+    color: rgb(255, 226, 96);
+    transform: rotate(180deg) scale(0.95);
+}
+
+#journey{
+    display: none; 
+    opacity: 0;
+    width: 100vw;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#nextButton{
+    background-color: #222222;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2vmin;
+    cursor: pointer;
+    font-family: "Press Start 2P", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    z-index: 2;
+    -webkit-transition: all .1s ease-in-out;
+   -moz-transition: all .1s ease-in-out;
+   transition: all .1s ease-in-out;
+border: black 3px;
+box-shadow: 1px 1px rgb(146, 146, 146);
+width: 20vmin;
+height: 6vmin;
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: center;
+}
+
+#nextButton:hover{
+    opacity: 0.8;
+    background-color: #f56850;
+    box-shadow: 1px 1px 20px rgb(46, 46, 46);
+}
+
+
+
+
+
+
+/*COLLAPSIBLE*/
+
+
+ .container {
+	 display: flex;
+	 flex-flow: column nowrap;
+	 justify-content: center;
+	 align-items: center;
+	 width: 100vw;
+     font-family: "Play", sans-serif;
+
+}
+ .container .collapse-wrap {
+	 width: 90vw;
+	 height: 13rem;
+}
+ .container .collapse-wrap .collapse-btn {
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+	 width: 90vw;
+	 height: 4rem;
+	 padding: 1rem;
+	 background: #fa705e;
+	 border: 0.1rem solid #686963;
+	 box-sizing: border-box;
+	 cursor: pointer;
+}
+ .container .collapse-wrap .collapse-btn:hover {
+	 background:#fa705e;
+	 transition: 300ms ease-in;
+}
+ .container .collapse-wrap .collapse-btn .btn-text {
+	 font-size: 1rem;
+	 color: #fafafa;
+}
+ .container .collapse-wrap .collapse-btn .btn-icon {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 font-size: 1.2rem;
+	 color: #fafafa;
+	 width: 1.1rem;
+	 height: 1.1rem;
+	 border: 0.1rem solid #fafafa;
+	 border-radius: 50%;
+}
+ .container .collapse-wrap .content {
+	 width: 100%;
+	 max-height: 0;
+	 overflow: scroll;
+	 font-size: 0.9rem;
+	 line-height: 1.35rem;
+	 padding: 1rem;
+	 background: rgb(43, 43, 43);
+	 border: 0.1rem solid #686963;
+	 border-top: none;
+	 border-radius: 0 0 1rem 1rem;
+	 box-sizing: border-box;
+	 animation: slide linear 100ms forwards;
+}
+ .container .collapse-wrap .content h3 {
+	 margin-bottom: 1rem;
+}
+ @keyframes slide {
+	 0% {
+		 max-height: 0;
+	}
+	 100% {
+		 max-height: 100%;
+	}
+}
+ @media (max-width: 768px) {
+	 .container .collapse-wrap {
+		 width: 90%;
+	}
+}
+ 

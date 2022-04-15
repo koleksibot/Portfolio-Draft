@@ -1,0 +1,576 @@
+
+body {
+color: white;
+  background: rgb(34, 34, 34);
+  font-family: "Play", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+min-width: 100vw;
+min-height: 100vh;
+}
+
+#container{
+display: flex;
+width: 100%;
+height: 100%;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: center;
+}
+
+#nav{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 60px;
+    width: 100vw;
+    text-align: right;
+ }
+ 
+
+
+/*----------------------------*/
+/* ----VERTICAL NAV BAR------ */
+/*----------------------------*/
+
+.vertNavBar .nav-links li:nth-of-type(1),
+.vertNavBar .nav-links li:nth-of-type(2),
+.vertNavBar .nav-links li:nth-of-type(3),
+.vertNavBar .nav-links li:nth-of-type(4),
+.vertNavBar .nav-links li:nth-of-type(5) {
+	opacity: 0;
+	transition: .3s ease-in all
+}
+
+.vertNavBar .nav-links li:nth-of-type(1).nav-link-open,
+.vertNavBar .nav-links li:nth-of-type(2).nav-link-open,
+.vertNavBar .nav-links li:nth-of-type(3).nav-link-open,
+.vertNavBar .nav-links li:nth-of-type(4).nav-link-open,
+.vertNavBar .nav-links li:nth-of-type(5).nav-link-open {
+	opacity: 1;
+	transform: translateY(10px)
+}
+
+.vertNavBar .nav-links li a::after,
+.vertNavBar .nav-links li a::before {
+	position: fixed;
+	content: "";
+	height: 4px;
+	width: 0%;
+	background-color: #2a3255;
+	left: 0;
+	border-radius: 2px;
+	transition: .3s ease all;
+	z-index: 14
+}
+
+.burger {
+	display: none;
+		position: fixed;
+		font-size: 40px;
+		top: 25px;
+		right: 25px;
+		color: #fff;
+		cursor: pointer;
+		z-index: 15;
+}
+
+.burger i:nth-of-type(1) {
+	display: block
+}
+
+.burger i:nth-of-type(2) {
+	display: none
+}
+
+.burger.burger-open {
+	color: #fff;
+	z-index: 17
+}
+
+.burger.burger-open i:nth-of-type(1) {
+	display: none
+}
+
+.burger.burger-open i:nth-of-type(2) {
+	display: block
+}
+
+.vertNavBar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 50%;
+  width: 20%;
+  background-color: rgba(22, 22, 43, .5);
+  clip-path: circle(0px at 250px 0px);
+  transition: .5s ease all;
+  z-index: 16 !important
+}
+
+.vertNavBar .nav-links {
+	position: fixed;
+	top: 22%;
+	left: 87%;
+	transform: translate(-50%, -50%)
+}
+
+.vertNavBar .nav-links li {
+	list-style-type: none
+}
+
+.vertNavBar .nav-links li:nth-of-type(1).nav-link-open {
+	transition-delay: 0.25s
+}
+
+.vertNavBar .nav-links li:nth-of-type(2).nav-link-open {
+	transition-delay: 0.35s
+}
+
+.vertNavBar .nav-links li:nth-of-type(3).nav-link-open {
+	transition-delay: 0.45s
+}
+
+.vertNavBar .nav-links li:nth-of-type(4).nav-link-open {
+	transition-delay: 0.55s
+}
+
+.vertNavBar .nav-links li a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 17px;
+	position: relative;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 0
+}
+
+.vertNavBar .nav-links li a::before {
+	top: -2px
+}
+
+.vertNavBar .nav-links li a::after {
+	bottom: -5px
+}
+
+.vertNavBar .nav-links li a:hover::before {
+	width: 100%
+}
+
+.vertNavBar .nav-links li a:hover::after {
+	width: 100%
+}
+
+.vertNavBar.nav-open {
+	display: block;
+	z-index: 14;
+	clip-path: circle(100%)
+}
+
+.nav-links {
+	display: none
+}
+
+
+
+
+
+
+ #logo{
+    font-family:  'Press Start 2P', cursive;
+    position: fixed;
+    left: 25px;
+    top: 18px;
+    font-size: 3.5vmin;
+    cursor: pointer;
+}
+
+ .link{
+     position: relative;
+     top: 20px;
+     margin-left: 10vmin;
+     margin-right: 10vmin;
+     font-family:  'Press Start 2P', cursive;
+     font-size: 1.7vmin;
+ }
+ 
+ .link:hover{
+     color: rgb(255, 241, 117);
+     text-decoration: underline;
+     
+ }
+
+ a{
+   color: white;
+   text-decoration: none;
+   font-size: 2.2vmin;
+ }
+
+ 
+
+.button {
+  background-color: #141414;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2vmin;
+  cursor: pointer;
+  z-index: 2;
+  -webkit-transition: all .1s ease-in-out;
+ -moz-transition: all .1s ease-in-out;
+ transition: all .1s ease-in-out;
+border: black 3px;
+box-shadow: 1px 1px rgb(146, 146, 146);
+padding: 2vmin;
+margin: 5vmin;
+}
+
+#view, #git{
+  background-color:rgb(19, 19, 19);
+  margin: 0;
+  margin-right: 3vmin;
+  color: white;
+  font-weight: bolder;
+  border: 3.5px white solid;
+  font-size: 2.5vmin;
+}
+
+
+#view:hover, #git:hover{
+  background-color: #f56850;
+}
+
+
+
+.button:hover {
+  opacity: 0.9;
+  background-color: #f56850;
+  box-shadow: 1px 1px 20px rgb(107, 106, 106);
+}
+
+
+#buttons{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  top: 5vmin;
+}
+
+a:hover{
+  color:rgb(255, 255, 179);
+}
+
+/* CONTENT */
+ul{
+  padding: 0;
+  padding-left: 3vmin;
+  margin: 0;
+}
+
+#requestList{
+  padding-left: -3vmin;
+}
+
+video{
+  width: 50vw;
+}
+
+#vidContainer{
+  width: 100vw;
+  background: #c5b597;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+ 
+
+}
+
+#content{
+  display: flex;
+  width: 100%;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8vmin;
+}
+
+
+#contentTitle, #processTitle{
+  font-size: 5.4vmin;
+color: white;
+  align-self: flex-start;
+
+}
+
+/*container for content*/
+#contentText{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background: rgb(34, 34, 34);
+
+}
+
+#contentStuff{
+width: 80%;
+font-size: 2.3vmin;
+}
+
+
+
+#colj11{
+  padding-top: 10vmin;
+}
+
+#colj33{
+  padding-bottom: 10vmin;
+}
+
+#learning{
+  padding-bottom: 25vmin;
+}
+
+.colj{
+  display: flex;
+flex-flow: row nowrap;
+justify-content: center;
+align-items: center;
+padding-top: 25vmin;
+}
+
+.colj1{
+  padding-right: 5vmin;
+}
+
+.colj1, .colj2{
+  width: 100%;
+  height: 100%;
+  align-self: flex-start;
+  font-family: "Play", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3vmin;
+  font-weight: bold;
+  color: rgb(255, 255, 179);
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+.intro{
+  padding-left: 15vmin;
+  padding-top: 9vmin;
+  
+}
+
+
+#timeline{
+  width: 50vmin;
+  height: 90vmin;
+}
+
+#consult{
+  padding-top: 12vmin;
+  color: white;
+}
+
+.processTitle{
+  font-size: 4vmin;
+  color: rgb(255, 255, 179);
+  font-weight: bold;
+}
+
+#mocks{
+  width: 46vmin;
+  height: 80vmin;
+  cursor: pointer;
+}
+
+.indent{
+  padding-left: 6vmin;
+}
+
+.tools{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tool{
+background: black;
+color: white;
+padding: 1vmin;
+margin-right: 2vmin;
+font-size: 2vmin;
+font-weight: lighter;
+box-shadow: 0px 0px 0px 0.5px white;
+}
+
+.tool:hover{
+  box-shadow: 0px 0px 2px 0.5px white;
+}
+
+.text{
+  color: white;
+  font-size: 2.5vmin;
+  font-weight: normal;
+}
+
+
+.lowFid{
+  width: 75vmin;
+  height: 120vmin;
+  padding-left: 10vmin;
+}
+
+
+
+ /* FOOTER */
+
+ #footer{
+background: rgb(26, 25, 25);
+  width: 100%;
+display: flex;
+flex-flow: row nowrap;
+justify-content: flex-start;
+align-items: center;
+
+}
+
+#col1f, #col2f, #col3f{
+width: 100%;
+display: flex;
+flex-flow: column nowrap;
+justify-content: flex-start;
+align-items: flex-start;
+
+}
+
+#col1f{
+  padding: 10vmin;
+  
+}
+
+
+#col2f, #col3f{
+  line-height: 4vmin;
+}
+
+
+.titleStyle{
+  font-family: "Press Start 2P", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5vmin;
+}
+
+#copyEmail{
+  width: 25vmin;
+  padding: 2.5vmin;
+  position: relative;
+ left:  -2vmin;
+ z-index: 3;
+}
+
+
+
+#mushrooms{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+.mush{
+  width: 8vmin;;
+  height: 8vmin;
+  position: relative;
+  top: 2vmin;
+}
+
+#redmush{
+  position: inherit;
+  top: 3vmin;
+}
+
+#yellowmush{
+  position: inherit;
+  top: 3.7vmin;
+  left: -2vmin;
+}
+
+#mushbutton{
+display: flex;
+width: 100%;
+height: 100%;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: flex-start;
+}
+
+
+/* END OF FOOTER */
+
+
+
+
+
+/* BACK TO TOP */
+#anchor {
+position: absolute;
+display: block;
+z-index: 0;
+top: 0;
+left: 0;
+opacity: 0
+}
+
+#up{
+color: white !important;
+position: fixed;
+right: 0;
+bottom: 0;
+width: 50px;
+height: 50px;
+font-size: 5vmin;
+}
+
+
+
+
+
+ /* IPAD and MOBILE */
+ @media only screen and (min-width: 0px) and (max-width: 945px) {
+  .burger {
+        display: flex
+    }
+
+    .vertNavBar {
+        display: block;
+    }
+
+
+    .nav-links {
+  display: block
+}
+
+#nav {
+  display: none
+}
+
+#colj33, #colj22{
+flex-flow: column nowrap;
+
+}
+
+
+  }  
+
+
